@@ -1,0 +1,109 @@
+.room-container {
+    position     : fixed;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate3d(-50%, -50%, 0);
+    width        : 90%;
+    height       : 90vh;
+    border-radius: 20px;
+    background   : rgba(255, 255, 255, 0.7);
+    display      : flex;
+
+    .user-list {
+        width       : 300px;
+        border-right: 2px solid black;
+
+        .user-list-title {
+            font-size  : 24px;
+            font-weight: 600;
+            margin-top : 20px;
+        }
+
+        .user-item {
+            margin-top : 20px;
+            font-weight: 550;
+            font-size  : 20px;
+            cursor     : pointer;
+
+            &.active {
+                color: #ffcd32;
+            }
+        }
+    }
+
+    .room-content {
+        width : 100%;
+        height: 100%;
+
+        .chat-content {
+            width        : 100%;
+            height       : 70%;
+            border-bottom: 1px solid;
+            overflow     : auto;
+
+            &>div {
+                padding: 5px;
+            }
+
+            .chat-item.msg {
+                text-align: left;
+
+
+                .from,
+                .to {
+                    font-size  : 20px;
+                    padding    : 0 10px;
+                    font-weight: 600;
+                }
+
+            }
+
+            .chat-item.userIn,
+            .chat-item.userOut {
+                .name {
+                    color    : blue;
+                    padding  : 0 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .edit-content {
+            height: 30%;
+
+            .edit-top {
+                display        : flex;
+                justify-content: space-between;
+                padding        : 10px;
+
+                .spec {
+                    font-size  : 20px;
+                    font-weight: 600;
+                    padding    : 0 10px;
+                }
+
+                .btn {
+                    padding  : 5px;
+                    border   : 1px solid;
+                    font-size: 14px;
+                    cursor   : pointer;
+                }
+            }
+
+            .edit-input {
+                height: 60%;
+
+                textarea {
+                    width      : 95%;
+                    height     : 100%;
+                    background : none;
+                    border     : 1px solid black;
+                    resize     : none;
+                    font-size  : 18px;
+                    text-indent: 2em;
+                    outline    : none;
+                }
+            }
+        }
+    }
+}
